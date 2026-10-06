@@ -1,0 +1,612 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0b0b0b;
+    border-bottom: 1px solid #252525;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    min-height: 80px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #ff3c00;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff3c00;
+}
+
+.nav-btn {
+    background: #ff3c00;
+    color: #ffffff;
+
+    padding: 12px 22px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.small-title,
+.section-label {
+    color: #ff3c00;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    max-width: 700px;
+
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 0.95;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #ff3c00;
+}
+
+.hero-text {
+    max-width: 580px;
+    margin: 25px 0;
+
+    color: #d1d1d1;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #ff3c00;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background: #ffffff;
+    color: #111111;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 100px 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image {
+    overflow: hidden;
+}
+
+.about-image img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.about-content h2,
+.section-heading h2,
+.contact h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.about-content h2 span,
+.section-heading h2 span,
+.contact h2 span {
+    color: #ff3c00;
+}
+
+.about-content p:not(.section-label) {
+    color: #aaa;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+
+/* =========================
+   PROGRAMS
+========================= */
+
+.programs {
+    background: #111111;
+    padding: 100px 25px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-heading > p:last-child {
+    color: #999;
+}
+
+
+/* =========================
+   CARD LAYOUT
+========================= */
+
+.card-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   FITNESS CARD
+========================= */
+
+.fitness-card {
+    background: #191919;
+
+    border: 1px solid #292929;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.fitness-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff3c00;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+    height: 230px;
+    overflow: hidden;
+}
+
+.card-image img {
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.fitness-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+.card-content {
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.tag {
+    display: inline-block;
+
+    color: #ff3c00;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.card-content h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #999;
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.card-info {
+    display: flex;
+    gap: 15px;
+
+    color: #ddd;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.card-btn {
+    color: #ff3c00;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    margin-top: auto;
+
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   TRAINERS
+========================= */
+
+.trainers {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 100px 25px;
+}
+
+.trainer-box {
+    min-height: 220px;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.trainer-box h3 {
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+.trainer-box span {
+    color: #ff3c00;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 110px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p:not(.section-label) {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    min-height: 100px;
+
+    padding: 30px 25px;
+
+    background: #070707;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+footer p {
+    color: #777;
+    font-size: 12px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #999;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff3c00;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .programs,
+    .trainers,
+    .about {
+        padding: 70px 20px;
+    }
+
+    .trainer-box {
+        padding: 30px;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .trainer-box h3 {
+        font-size: 28px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+}
